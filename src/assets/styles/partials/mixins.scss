@@ -1,0 +1,11 @@
+@mixin center($positions: "center") {
+  display: flex;
+  align-items: center;
+  @if ($positions == center) {
+    justify-content: center;
+  } @else if ($positions == "between") {
+    justify-content: space-between;
+  } @else if ($positions == "around") {
+    justify-content: space-around;
+  }
+}
