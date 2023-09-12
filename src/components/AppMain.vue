@@ -3,9 +3,7 @@ import AppCard from "./AppCard.vue";
 
 export default {
   data() {
-    return {
-      title: "Hello world",
-    };
+    return {};
   },
 
   components: {
@@ -22,6 +20,6 @@ export default {
 
 <style lang="scss" scoped>
 main {
-  background-color: #7300ff;
+  background-color: #119281;
 }
 </style>
