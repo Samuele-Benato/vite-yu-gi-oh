@@ -2,10 +2,13 @@
 import axios from "axios";
 import AppHeader from "./components/AppHeader.vue";
 import AppMain from "./components/AppMain.vue";
+import store from "../src/store";
 
 export default {
   data() {
-    return {};
+    return {
+      store,
+    };
   },
 
   components: {
@@ -16,15 +19,15 @@ export default {
   methods: {
     takeCards(apiUrl) {
       axios.get(apiUrl).then((response) => {
-        const ygoCardsData = response.data.results;
+        const ygoCardsData = response.data.data;
 
-        store.ygoCards = ygoCardsData;
+        this.store.ygoCards = ygoCardsData;
       });
     },
   },
 
   created() {
-    this.takeCards(store.apiUrl);
+    this.takeCards(this.store.apiUrl);
   },
 };
 </script>
