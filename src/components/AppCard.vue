@@ -28,7 +28,8 @@ export default {
               <strong>Frame Type : </strong>{{ card.frameType }}
             </h6>
             <h6 class="m-0">
-              <strong>Archetype : </strong>{{ card.archetype }}
+              <strong v-if="card.archetype">Archetype : </strong
+              >{{ card.archetype }}
             </h6>
           </div>
         </div>
