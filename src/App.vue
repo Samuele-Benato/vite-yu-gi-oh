@@ -74,13 +74,13 @@ export default {
     },
 
     filterSerch() {
-      const filterArcheType = store.apiArchetypeUrl + serchedTerm;
-      console.log(filterArcheType);
+      // const filterArcheType = store.apiArchetypeUrl + term;
+      this.takeCards(store.apiArchetypeUrl);
     },
   },
   created() {
     this.takeCards(store.apiUrl);
-    this.fetchArchetypes();
+    this.fetchArchetypes(store.apiArchetypeUrl);
   },
 };
 </script>
@@ -93,7 +93,7 @@ export default {
     :showNextButton="showNextPage"
     @go-prev="prevPage()"
     @go-next="nextPage()"
-    @filterSerch="filterSerch()"
+    @filterSerch="filterSerch"
   />
   <AppMain />
 </template>

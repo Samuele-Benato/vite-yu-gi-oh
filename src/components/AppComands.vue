@@ -41,9 +41,9 @@ export default {
       v-model="type"
       class="form-select w-25 m-2"
       aria-label="Default select example"
-      @change="$emit('filterSerch' + type)"
+      @change="$emit('filterSerch', type)"
     >
-      <option selected>Open this select menu</option>
+      <option value="" selected>Scegli l'archetypo</option>
       <option
         v-for="archeType in store.ygoCardsArchetype"
         :value="archeType.archetype_name"
